@@ -25,8 +25,16 @@ char *strdup(const char *s)
     newstr = (char *) malloc(sizeof (char) * ft_strlen(s) + 1);
     if (newstr == '\0')
         return (0);
-    while()
-
-    return (newstr)
-
+    while(*s)
+    {
+        newstr[i++] = *s++;
+    }
+    newstr[i] = '\0';
+    return (newstr);
 }
+/*
+int	main(void)
+{	
+	printf("str: %s\n", ft_strdup("Hello World"));
+	return (0);
+}*/

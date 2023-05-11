@@ -27,8 +27,8 @@ void *ft_calloc(size_t num, size_t size)
     ft_bzero(ptr, (num * size));
     return (ptr);
 }
-
+/*
 int main(void)
 {    
     printf("Asignacion de memoria a 0:%d", ft_calloc(10, 4));
-}
+}*/
