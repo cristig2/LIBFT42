@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:38:55 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/09 11:38:55 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/12 10:22:01 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,21 @@
 duplicado de la cadena apuntada por s. La memoria para la nueva cadena se
 obtiene automáticamente con malloc(3), y puede (y debe) liberarse con free(3)*/
 
-char *strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-    char  *newstr;
-    int    i;
+	char	*newstr;
+	int		i;
 
-    i = 0;
-    newstr = (char *) malloc(sizeof (char) * ft_strlen(s) + 1);
-    if (newstr == '\0')
-        return (0);
-    while(*s)
-    {
-        newstr[i++] = *s++;
-    }
-    newstr[i] = '\0';
-    return (newstr);
+	i = 0;
+	newstr = (char *) malloc(sizeof (char) * ft_strlen(s) + 1);
+	if (newstr == NULL)
+		return (0);
+	while (*s)
+	{
+		newstr[i++] = *s++;
+	}
+	newstr[i] = '\0';
+	return (newstr);
 }
 /*
 int	main(void)

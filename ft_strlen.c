@@ -6,9 +6,11 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 12:08:41 by crgallar          #+#    #+#             */
-/*   Updated: 2023/04/21 12:57:10 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/02 16:09:57 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strlen(const char *str)
 {

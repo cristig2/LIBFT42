@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 09:56:30 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/05 11:00:03 by crgallar         ###   ########.fr       */
+/*   Created: 2023/05/05 10:20:05 by crgallar          #+#    #+#             */
+/*   Updated: 2023/05/08 10:37:48 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-The strchr() function locates the first occurrence of c (converted to a
-char) in the string pointed to by s.  The terminating null character is
-considered to be part of the string; therefore if c is `\0', the func-
-tions locate the terminating `\0'.
-The functions strchr() return a pointer to the located
+The strrchr() function is identical to strchr(), except it locates the
+last occurrence of c.
+The functions strrchr() return a pointer to the located
 character, or NULL if the character does not appear in the string.
 */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
 	i = 0;
 	while (s[i] != '\0')
+		i++;
+	while (i >= 0)
 	{
 		if (s[i] == (char)c)
 			return ((char *)&s[i]);
-		i++;
+		i--;
 	}
-	if ((char)c == '\0')
-		return ((char *)&s[i]);
 	return (0);
 }
-/*int	main()
+/*int	main(void)
 {
-	printf("str: %s\n", ft_strchr("Hola caracola", 'a'));
+	printf("str: %s\n", ft_strrchr("Hola caracola", 'a'));
+	return (0);
 }*/
