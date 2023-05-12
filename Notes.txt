@@ -1,3 +1,8 @@
+Para compilar necesitamos incluir todas las funciones que hayamos usado dentro de la función.
+y si en la función que usamos hay una llamada a otra función tambien la incluiremos.
+Ejemplo:
+		gcc -g ft_substr.c ft_strdup.c ft_strlen.c
+
 The man pages are divided into sections with different topics:
 
 1 User Commands
@@ -8,3 +13,54 @@ The man pages are divided into sections with different topics:
 6 Games et. al.
 7 Miscellanea
 8 System Administration tools
+
+Un índice es un valor numérico que se utiliza para acceder a un 
+elemento específico de una lista, matriz o cualquier otra estructura 
+de datos que pueda ser indexada. Por ejemplo, en una cadena de caracteres, 
+cada carácter se puede acceder a través de su índice correspondiente, 
+que es un número entero que representa la posición del carácter dentro 
+de la cadena. El primer elemento de una lista o matriz generalmente 
+tiene un índice de 0, mientras que el último elemento tiene un índice 
+de tamaño-1, donde tamaño es el número total de elementos en la estructura 
+de datos.
+
+
+if (s == NULL)
+		return (0);
+	i = 0;
+	while (s[i])
+		i++;
+	if (start > i)
+		return (ft_strdup(""));
+	i = i - start;
+	if (len > i)
+		len = i;
+	substr = (char *)malloc(sizeof(char) * (len + 1));
+	if (substr == NULL)
+		return (0);
+	substr[i] = '\0';
+	while (len--)
+		substr[len] = s[start + len];
+	return (substr);
+
+
+
+	i = 0;
+	if (start >= (unsigned int)ft_strlen(s))
+	{
+		substr = (char *)malloc(sizeof(*s));
+		*substr = 0;
+		return (substr);
+	}
+	if (ft_strlen(s) - start < len)
+		len = ft_strlen(s) - start;
+	substr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!substr)
+		return (0);
+	while (i < len && s[start + i] != '\0')
+	{
+		substr[i] = s[start + 1];
+		i++;
+	}
+	substr[i] = '\0';
+	return (substr);
