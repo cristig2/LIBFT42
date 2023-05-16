@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-/*strdup() devuelve un puntero a una nueva cadena de caracteres que es un 
-duplicado de la cadena apuntada por s. La memoria para la nueva cadena se
-obtiene automáticamente con malloc(3), y puede (y debe) liberarse con free(3)*/
+/*Devuelve un puntero a una nueva string que es un duplicado de la string 
+apuntada por “s”. La memoria para la nueva string se obtiene automáticamente 
+con malloc, y puede (y debe) liberarse con free.*/
 
 char	*ft_strdup(const char *s)
 {

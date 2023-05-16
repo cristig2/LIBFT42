@@ -13,7 +13,7 @@
 #include "libft.h"
 
 /*Busca la primera aparición del string neddle en el string str, sin pasarse de
-len. Si needle está vacío devuelve str, si str está vació o no se encuentra
+len. Si needle está vacío devuelve str, si str está vació o no se encuentra 
 needle en str devuelve NULL, y en caso de que se encuentre se devuelve un puntero
 al primer carácter de la primera ocurrencia.*/
 

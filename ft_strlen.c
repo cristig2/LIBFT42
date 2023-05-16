@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/*Indica el numero de caracters de una string.
+Devuelve el numero de caracteres que forma esa string*/
+
 int	ft_strlen(const char *str)
 {
 	int	i;
@@ -23,3 +26,9 @@ int	ft_strlen(const char *str)
 	}
 	return (i);
 }
+/*
+int	main(void)
+{
+	printf("Numero de caracteres: %d\n", ft_strlen("Hello World"));
+	return (0);
+}*/

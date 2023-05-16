@@ -10,16 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Esta función recibe un string dst, un string src y un tamaño dstsize.
-Copia origen al final de destino hasta el tamaño indicado. Añadiendo un nulo al 
-final para que sea una cadena valida y devuelve el tamaño de origen.
-*/
-/*
-El programador es responsable de asignar una memoria lo suficientemente grande 
-en el puntero de destino para almacenar ambas cadenas.
-*/
-/*Creo un contador el cual tiene que ser */
+/*Copia “src” al final de “dst” concatenando ambas string hasta el tamaño 
+indicado. Añadiendo un nulo al final para que sea una cadena valida y devuelve
+el tamaño inicial de “dst” mas “src”.*/
 
 #include "libft.h"
 

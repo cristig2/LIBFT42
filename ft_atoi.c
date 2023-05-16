@@ -12,14 +12,13 @@
 
 #include "libft.h"
 
-/*Esta función se usa para convertir una cadena en un entero. De char a int.
-La función atoi () escanea la cadena, omite los caracteres en 
-blanco anteriores (como espacios, sangría de tabulación...), no inicia la 
-conversión hasta que encuentra un número o un signo, y luego encuentra un 
-non-number O la conversión termina cuando la cadena termina ('\ 0'), y se 
-devuelve el resultado.
-Devuelve el entero convertido; si str no se puede convertir a int o str es una
-cadena vacía, se devolverá 0.*/
+/*Esta función se usa para convertir una string en un entero (de char a int).
+Escanea la string, omite los caracteres en blanco anteriores (como espacios,
+sangría de tabulación...), no inicia la conversión hasta que encuentra un número
+o un signo, y luego si encuentra un non-number o la conversión termina ('\ 0'),
+se devuelve el resultado.
+Devuelve el entero convertido; si “str” no se puede convertir a int o “str” es
+una cadena vacía, se devolverá 0.*/
 /*
 1. Espacios en blanco
 2. Signos negativos

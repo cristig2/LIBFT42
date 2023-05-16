@@ -10,12 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-La función strncmp() debe comparar no más de n bytes (los bytes que siguen a un
-carácter NULL no se comparan) de la matriz apuntada por s1 a la matriz apuntada
-por s2. Si llega al final, devuelve la resta del último carácter comparado en
-ambas cadenas, si n es nulo o si c sobrepasa n -1.
-*/
+/*La función strncmp() debe comparar no más de n bytes (los bytes que siguen a
+un carácter nulo(0) no se comparan) de la matriz apuntada por s1 a la matriz 
+apuntada por s2. Si llega al final, devuelve la resta del último carácter 
+comparado en ambas cadenas, si n es nulo o si c sobrepasa n -1.*/
 
 #include "libft.h"
 

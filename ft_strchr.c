@@ -10,14 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-The strchr() function locates the first occurrence of c (converted to a
-char) in the string pointed to by s.  The terminating null character is
-considered to be part of the string; therefore if c is `\0', the func-
-tions locate the terminating `\0'.
-The functions strchr() return a pointer to the located
-character, or NULL if the character does not appear in the string.
-*/
+/*Localiza la primera aparición de “c” (convertido a char) en la string 
+apuntada por “s”. Devuelve un puntero a la ubicación del carácter, o nulo(0) si
+el carácter no aparece en la string.
+El carácter nulo de terminación es considerado como parte de la string, por lo 
+tanto, si “c” está vacía, la función localiza el terminador `\0' y devuelve 
+nulo (0).*/
 
 #include "libft.h"
 

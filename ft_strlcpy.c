@@ -3,23 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:56:38 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/02 13:38:53 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/15 22:30:23 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*The strlcpy() and strlcat() functions copy and concatenate strings with
-the same input parameters and output result.*/
-/*They are designed to be safer, more consistent, and less error prone 
-replacements for the easily misused functions strncpy(3) and strncat(3).*/
-/*strlcpy() and strlcat() take the full size of the destination buffer and
-guarantee NUL-termination if there is room.  Note that room for the NUL
-should be included in dstsize.*/
-/* strlcpy() copies up to dstsize - 1 characters from the string src to dst,
-NUL-terminating the result if dstsize is not 0.*/
-/*The strncpy() function shall return dst*/
+/*Copia una string “src” a otra string “dest” hasta el tamaño “dstsize” -1 que
+sería el ultimo carácter nulo de la string “src”, termiando “dest” con nulo
+(‘\0’) si esta string no fuese 0.*/
 
 #include "libft.h"
 

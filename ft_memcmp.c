@@ -12,11 +12,10 @@
 
 #include "libft.h"
 
-/*La función memcmp() compara los primeros n bytes (cada uno interpretado
-como unsigned char) del objeto apuntado por s1 con los primeros n bytes del
-objeto apuntado por s2. El dato que devuelve es la resta de los primeros
-caracteres distintos encontrados entre ambos strings. Si son todos iguales
-devuelve 0. PORQUE SE USA CON CONST*/
+/*Compara los primeros “n” bytes (cada uno interpretado como unsigned char) del
+objeto apuntado por “s1” con los primeros “n” bytes del objeto apuntado por “s2”
+Devuelve la resta de los primeros caracteres distintos encontrados entre ambos
+strings. Si son todos iguales devuelve 0.*/
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

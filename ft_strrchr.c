@@ -10,12 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-The strrchr() function is identical to strchr(), except it locates the
-last occurrence of c.
-The functions strrchr() return a pointer to the located
-character, or NULL if the character does not appear in the string.
-*/
+/*La función strrchr() es igual a strchr(), excepto que localiza el última
+aparición de “c”. Devuelve un puntero a la ubicación del carácter “c”, o nulo(0)
+si el carácter no aparece en la string.*/
 
 #include "libft.h"
 

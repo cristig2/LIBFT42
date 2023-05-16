@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 18:27:31 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/02 11:55:04 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/15 22:17:26 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*The memmove() function copies len bytes from string src to string dst. The
-two strings may overlap; the copy is always done in a non-destructive manner.*/
-/*The main difference between memcpy and memmove is,memcpy works on the same
-string but memmove works in separate memory by taking a copy of the string.*/
-/*Due to this,overlapping happens in memcpy not in memmove*/
-/*El if es para los casos nulos en los que no hay nada que pegar o donde pegar*/
+/*Copia de un string “src” a otra string “dest” n bytes del área de memoria. 
+Las áreas de memoria pueden superponerse (overlapping) como pasa en la función 
+de memcpy(). Por ello, la copia se realiza de “src” a una matriz temporal para 
+que no se solapen con “src” o “dest” y los bytes se copiaran entonces de la 
+matriz temporal a dest. 
+Si ambos son nulos (0), devolverá nulos (0), si no devolverá la cadena “dest”.*/
 
 #include "libft.h"
 

@@ -1,7 +1,7 @@
 # Makefile es un archivo para recompilar mi proyecto. Creando reglas a partir de objetivos, dependecias e instruccciones
 # Makefile indica a "make" en la terminal como recompilarlo a partir de las reglas que le indiquemos
 # El carácter @ sirve para silenciar un comando en su ejecución y no muestre nada en pantalla
-# Las variables se escriben: "NOMBRE="
+# Las variables se escriben: "NAME ="
 # Las reglas se escriben: "REGLA:" seguido de un salto de linea y una tabulacion
 # Cuando hay parámetros junto a la regla, indicamos qué objetos deberían estar presentes para que se ejecute dicha regla
 
@@ -33,16 +33,17 @@ FILES = ft_isalpha.c\
 		ft_substr.c\
 		ft_strjoin.c\
 
-CC = gcc
-RM = rm -f
-OBJECTS = $(FILES:.c=.o)
-CFLAGS = -Wall -Wextra -Werror
+CC = gcc						#Compila
+RM = rm -f 						#Borra
+OBJECTS = $(FILES:.c=.o)		#Pasa los archivos .c a .o(objetos)
+CFLAGS = -Wall -Wextra -Werror 	#Flags de compilacion
 
 # REGLAS GENERALES
 all: $(NAME)
 
 $(NAME) : $(OBJECTS)
-	ar rcs $(NAME) $(OBJECTS)
+	ar rcs $(NAME) $(OBJECTS)	
+# Crea el ejecutable
 # "ar" crea la libreria estatica
 # "rcs" replace, create, sort 
 clean:
@@ -53,6 +54,7 @@ fclean: clean
 # fclean: clean Remueve todos los archivos objetos, binarios, y sus respectivas carpetas
 re: fclean all
 # re: fclean all Hace un re-make (como si se hubiera ejecutado Make por primera vez)
+# Limpia y recompila todo
 .PHONY: all clean fclean re
 # Prioriza las reglas del makefile frente a posibles comandos o archivos del sistema.
 # Le dice al make que estos nombre no son archivos

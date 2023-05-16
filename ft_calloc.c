@@ -13,9 +13,9 @@
 #include "libft.h"
 #include <stdlib.h>
 
-/*Calloc() asigna espacio de memoria de una matriz inicializado en 0.
-Segun num de elementos * size de longitud*/
-/*Usamos la funcion bzero ya que nos facilita poner a 0 los bytes necesarios*/
+/*Asigna espacio de memoria de una matriz inicializado en 0. Según “num” de 
+elementos “size” de longitud. Usamos esta función ya que nos facilita poner a 0
+los bytes que necesitemos.*/
 
 void	*ft_calloc(size_t num, size_t size)
 {

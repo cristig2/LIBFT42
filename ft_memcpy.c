@@ -3,21 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 16:42:19 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/02 11:04:26 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/15 21:59:46 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*La funcion memcpy() copia n bytes desde el area de memoria src al area dest.
-Dichas areas de memoria no deben tener ningun punto de interseccion; en tal caso
-utilizar la funcion memmove(3) en lugar de memcpy().*/
-/*La funcion memcpy() devuelve un puntero a dest.*/
+/*Copia de un string “src” a otra string “dest” n bytes. Si ambos son nulos (0),
+devolverá nulos (0), si no devolverá la cadena “dest”.*/
 /*El if es para los casos nulos en los que no hay nada que pegar o donde pegar*/
-/*you are reading from one memory segment and, well, copying it to another 
-memory segment. If the memory segments coincide at some point, a "overlapping" 
-would occur.*/
+/*Se esta leyendo de un segmento de memoria y copiándolo a otro segmento de 
+memoria. Si los segmentos de memoria coinciden en algún punto, ocurriría un 
+"overlapping".*/
 
 #include "libft.h"
 
