@@ -24,43 +24,9 @@ tiene un índice de 0, mientras que el último elemento tiene un índice
 de tamaño-1, donde tamaño es el número total de elementos en la estructura 
 de datos.
 
-
-if (s == NULL)
-		return (0);
-	i = 0;
-	while (s[i])
-		i++;
-	if (start > i)
-		return (ft_strdup(""));
-	i = i - start;
-	if (len > i)
-		len = i;
-	substr = (char *)malloc(sizeof(char) * (len + 1));
-	if (substr == NULL)
-		return (0);
-	substr[i] = '\0';
-	while (len--)
-		substr[len] = s[start + len];
-	return (substr);
-
-
-
-	i = 0;
-	if (start >= (unsigned int)ft_strlen(s))
-	{
-		substr = (char *)malloc(sizeof(*s));
-		*substr = 0;
-		return (substr);
-	}
-	if (ft_strlen(s) - start < len)
-		len = ft_strlen(s) - start;
-	substr = (char *)malloc(sizeof(char) * (len + 1));
-	if (!substr)
-		return (0);
-	while (i < len && s[start + i] != '\0')
-	{
-		substr[i] = s[start + 1];
-		i++;
-	}
-	substr[i] = '\0';
-	return (substr);
+Un descriptor de archivo es un entero, específicamente del tipo int de C. 
+Hay 3 descriptores de archivo estándar de POSIX:
+Valor entero	Nombre
+0	Entrada estándar (stdin)
+1	Salida estándar (stdout)
+2	Error estándar (stderr)

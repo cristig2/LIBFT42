@@ -3,32 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 10:32:07 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/12 19:33:51 by crgallar         ###   ########.fr       */
+/*   Created: 2023/05/17 19:39:47 by crgallar          #+#    #+#             */
+/*   Updated: 2023/05/17 19:39:47 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-Descripción: Toma una cadena "s" y crea una substring a partir de esa string.
-La substring empieza desde el índice "start" y tiene una longitud máxima "len".
+/*Toma una string "s" y crea una substring. “substr” empieza desde el índice 
+"start" y tiene una longitud máxima ("len"). La función reserva memoria para 
+“substr” utilizando "malloc" y devuelve un puntero de “substr” resultante o 
+nulo(0) si falla la reserva de memoria..
 	s: La string desde la que crear la substring.
 	start: El índice del caracter en "s" desde el que empezar la substring.
-	len: La longitud máxima de la substring.
-La función reserva memoria para la subcadena utilizando "malloc" y devuelve un
-puntero de la substring resultante o NULL si falla la reserva de memoria.
-Si el valor start, que es desde donde empieza a pasarse la substring, es mayor
-que el tamaño de la string, se devuelve ft_strdup de nada("").
-*/
+	len: La longitud máxima de la substring.*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 	size_t	i;
 
+	if (!s)
+		return (0);
 	i = 0;
 	if (start >= (unsigned int)ft_strlen(s))
 	{

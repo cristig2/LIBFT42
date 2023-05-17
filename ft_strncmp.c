@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 11:08:50 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/08 10:54:52 by crgallar         ###   ########.fr       */
+/*   Created: 2023/05/17 19:38:57 by crgallar          #+#    #+#             */
+/*   Updated: 2023/05/17 19:38:57 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

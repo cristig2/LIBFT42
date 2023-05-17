@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/27 11:27:45 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/15 13:24:10 by marvin           ###   ########.fr       */
+/*   Created: 2023/05/17 19:32:10 by crgallar          #+#    #+#             */
+/*   Updated: 2023/05/17 19:32:16 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #include "libft.h"
 

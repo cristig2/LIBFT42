@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/21 11:09:01 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/02 14:52:52 by crgallar         ###   ########.fr       */
+/*   Created: 2023/05/17 19:33:30 by crgallar          #+#    #+#             */
+/*   Updated: 2023/05/17 19:33:30 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

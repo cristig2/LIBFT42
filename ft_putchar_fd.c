@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 19:32:41 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/17 19:32:59 by crgallar         ###   ########.fr       */
+/*   Created: 2023/05/17 20:01:59 by crgallar          #+#    #+#             */
+/*   Updated: 2023/05/17 20:01:59 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Indica si el carácter que le introducimos en el arg es alfanumerico.
-Devuelve un valor distinto a 0, si el valor está entre 0-9, a-z o A-Z.*/
+#include "libft.h"
 
-int	ft_isalnum(int arg)
+/*Envía el carácter "c" al file descriptor especificado. No devuelve nada.
+	c: El carácter a enviar.
+	fd: El file descriptor sobre el que escribir.
+*/
+
+void ft_putchar_fd(char c, int fd)
 {
-	if ((arg >= 65 && arg <= 90) || (arg >= 97 && arg <= 122)
-		|| (arg >= 48 && arg <= 57))
-		return (1);
-	return (0);
+    write(fd, &c, 1);
 }
-/*
-int	main(void)
-{
-	printf("Valor del caracter: %d\n", ft_isalnum(c));
-	return (0);
-}*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/08 12:47:08 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/12 18:45:53 by crgallar         ###   ########.fr       */
+/*   Created: 2023/05/17 19:39:10 by crgallar          #+#    #+#             */
+/*   Updated: 2023/05/17 19:39:10 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ char	*ft_strnstr(const char *str, const char *needle, size_t len)
 /*
 int	main(void)
 {
-	printf("StrCmp: %s\n", ft_strnstr("Hola que tal", "Buenos días", 12));
+	printf("New string: %s\n", ft_strnstr("Hola que tal", "Buenos días", 12));
 	return (0);
 }*/

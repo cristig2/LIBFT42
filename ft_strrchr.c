@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 10:20:05 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/08 10:37:48 by crgallar         ###   ########.fr       */
+/*   Created: 2023/05/17 19:39:22 by crgallar          #+#    #+#             */
+/*   Updated: 2023/05/17 19:39:22 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
