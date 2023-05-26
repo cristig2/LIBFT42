@@ -35,6 +35,11 @@ FILES = ft_isalpha.c\
 		ft_strtrim.c\
 		ft_strmapi.c\
 		ft_striteri.c\
+		ft_putchar_fd.c\
+		ft_putstr_fd.c\
+		ft_putendl_fd.c\
+		ft_putnbr_fd.c\
+
 
 CC = gcc						#Compila
 RM = rm -f 						#Borra
@@ -44,7 +49,8 @@ CFLAGS = -Wall -Wextra -Werror 	#Flags de compilacion
 # REGLAS GENERALES
 all: $(NAME)
 
-$(NAME) : $(OBJECTS)
+$(NAME): 
+	gcc -c $(CFLAGS) $(FILES)
 	ar rcs $(NAME) $(OBJECTS)	
 # Crea el ejecutable
 # "ar" crea la libreria estatica

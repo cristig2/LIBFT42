@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:37:18 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/17 19:37:18 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/26 10:36:24 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,19 @@
 Si el string s y la funcion f son diferente a nuli, entra en el while y ejecuta
 la funcion*/
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    size_t  i;
+	size_t	i;
 
-    i = 0;
-    if (!(s == '\0' && f == '\0'))
-    {
-        while (s[i] != '\0')
-        {
-            f(i, &s[i]);
-            i++;
-        }
-    }
+	i = 0;
+	if (!(s == NULL && f == NULL))
+	{
+		while (s[i] != '\0')
+		{
+			f(i, &s[i]);
+			i++;
+		}
+	}
 }
 /*
 int	main(void)

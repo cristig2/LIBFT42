@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:39:34 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/17 19:39:34 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/26 11:01:30 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,26 @@ ft_strchr: Localiza la primera aparición de “set” en la string apuntada por
 Devuelve un puntero a la ubicación del carácter, o nulo (0) si el carácter no 
 aparece en la string.
 ft_substr: Toma una string "s1" y crea una substring que empieza desde "0" y 
-tiene una longitud de ("len" + '\0'). La función reserva memoria para la substring
-utilizando "malloc" y devuelve un puntero de la substring resultante o nulo (0)*/
+tiene una longitud de ("len" + '\0'). La función reserva memoria para la 
+substring utilizando "malloc" y devuelve un puntero de la substring resultante 
+o nulo(0). */
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	len;
+	size_t	len;
 
 	if (!s1 || !set)
 		return (0);
-	while (s1 && ft_strchr(set, *s1))
+	while (*s1 && ft_strchr(set, *s1))
+	{
 		s1++;
+	}
 	len = ft_strlen(s1);
-	while (len && ft_strchr(set, s1[len])
+	while (len && ft_strchr(set, s1[len]))
+	{
 		len--;
-	return (ft_substr(s1, 0, len + 1));	
+	}
+	return (ft_substr(s1, 0, len + 1));
 }
 /*
 int	main(void)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:36:30 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/17 19:36:32 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/26 09:58:59 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ Las áreas de memoria pueden superponerse (overlapping) como pasa en la función
 de memcpy(). Por ello, la copia se realiza de “src” a una matriz temporal para 
 que no se solapen con “src” o “dest” y los bytes se copiaran entonces de la 
 matriz temporal a dest. 
-Si ambos son nulos (0), devolverá nulos (0), si no devolverá la cadena “dest”.*/
+Si ambos son nulos (0), devolverá nulos (0), si no devolverá la cadena “dest”*/
 
 #include "libft.h"
 

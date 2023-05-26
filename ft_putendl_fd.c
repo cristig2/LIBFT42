@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 20:01:59 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/26 09:59:24 by crgallar         ###   ########.fr       */
+/*   Created: 2023/05/26 11:14:10 by crgallar          #+#    #+#             */
+/*   Updated: 2023/05/26 11:43:17 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Envía el carácter "c" al file descriptor especificado. No devuelve nada.
-	c: El carácter a enviar.
-	fd: El file descriptor sobre el que escribir.
-*/
-
-void	ft_putchar_fd(char c, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	write(fd, &c, 1);
+	int		len;
+	char	slt;
+
+	len = ft_strlen(s);
+	slt = '\n';
+	write (fd, s, len);
+	write (fd, &slt, 1);
 }

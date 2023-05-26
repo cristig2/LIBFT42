@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:38:45 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/17 19:38:45 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/26 10:35:07 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ memoria.
 	s: La string que iterar.
 	f: La función a aplicar sobre cada carácter.*/
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    unsigned int	i;
+	unsigned int	i;
 	char			*dup;
 
 	i = 0;
 	dup = ft_strdup(s);
-	if (dup == '\0' || s == '\0')
+	if (dup == NULL || s == NULL)
 		return (0);
 	while (s[i] != '\0')
 	{

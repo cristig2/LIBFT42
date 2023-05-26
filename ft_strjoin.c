@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:37:32 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/17 19:37:32 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/26 10:33:35 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,32 +18,32 @@ reserva de memoria.
     s1: La primera string.
     s2: La string a añadir a “s1”.*/
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    char const *s3;
-    int         i;
-    int         j;
+	char		*s3;
+	int			i;
+	int			j;
 
-    i = 0;
-    j = 0;
-    if (!s1 || !s2)
-        return (0);
-    s3 = (char *)malloc(sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
-    if (!s3)
-        return (0);
-    while (s1[i])
+	i = 0;
+	j = 0;
+	if (!s1 || !s2)
+		return (0);
+	s3 = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!s3)
+		return (0);
+	while (s1[i] != '\0')
 	{
-		nstr[i] = s1[i];
+		s3[i] = s1[i];
 		i++;
 	}
-	while (s2[j])
+	while (s2[j] != '\0')
 	{
-		nstr[i] = s2[j];
+		s3[i] = s2[j];
 		j++;
 		i++;
 	}
-	nstr[i] = '\0';
-	return (nstr);
+	s3[i] = '\0';
+	return (s3);
 }
 /*
 int	main(void)
