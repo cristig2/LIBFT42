@@ -1,32 +1,94 @@
 Para compilar necesitamos incluir todas las funciones que hayamos usado dentro de la función.
-y si en la función que usamos hay una llamada a otra función tambien la incluiremos.
+Si en la función que usamos hay una llamada a otra función tambien la incluiremos.
 Ejemplo:
 		gcc -g ft_substr.c ft_strdup.c ft_strlen.c
 
-The man pages are divided into sections with different topics:
 
-1 User Commands
-2 System Calls
-3 C Library Functions
-4 Devices and Special Files
-5 File Formats and Conventions
-6 Games et. al.
-7 Miscellanea
-8 System Administration tools
+Las páginas man están divididas en secciones con diferentes temas:
 
-Un índice es un valor numérico que se utiliza para acceder a un 
-elemento específico de una lista, matriz o cualquier otra estructura 
-de datos que pueda ser indexada. Por ejemplo, en una cadena de caracteres, 
-cada carácter se puede acceder a través de su índice correspondiente, 
-que es un número entero que representa la posición del carácter dentro 
-de la cadena. El primer elemento de una lista o matriz generalmente 
-tiene un índice de 0, mientras que el último elemento tiene un índice 
-de tamaño-1, donde tamaño es el número total de elementos en la estructura 
-de datos.
+1 Comandos de usuario
+2 llamadas al sistema
+3 Funciones de la biblioteca C
+4 Dispositivos y Archivos Especiales
+5 formatos de archivo y convenciones
+6 Juegos et. Alabama.
+7 Miscelánea
+8 Herramientas de administración del sistema
 
-Un descriptor de archivo es un entero, específicamente del tipo int de C. 
-Hay 3 descriptores de archivo estándar de POSIX:
-Valor entero	Nombre
-0	Entrada estándar (stdin)
-1	Salida estándar (stdout)
-2	Error estándar (stderr)
+
+
+Un índice es un valor numérico que se utiliza para acceder a un elemento específico de una lista, matriz o 
+cualquier otra estructura  de datos que pueda ser indexada. Por ejemplo, en una cadena de caracteres, cada 
+carácter se puede acceder a través de su índice correspondiente, que es un número entero que representa la 
+posición del carácter dentro de la cadena. El primer elemento de una lista o matriz generalmente tiene un 
+índice de 0, mientras que el último elemento tiene un índice de tamaño-1, donde tamaño es el número total 
+de elementos en la estructura de datos.
+
+
+
+En programación C, un descriptor de archivo es un valor entero que representa un archivo abierto en su programa. 
+Sirve como identificador o referencia al archivo, lo que le permite realizar varias operaciones en él,
+como leer o escribir en el archivo. El descriptor de archivo es una abstracción proporcionada por el sistema 
+operativo para administrar las operaciones de E/S.
+Los descriptores de archivo comúnmente utilizados:
+
+1. Entrada estándar (STDIN_FILENO):
+
+Valor del descriptor de archivo: 0
+Representa el flujo de entrada estándar, que normalmente está conectado al teclado.
+Se utiliza para leer la entrada del usuario.
+
+2. Salida estándar (STDOUT_FILENO):
+
+Valor del descriptor de archivo: 1
+Representa el flujo de salida estándar, que normalmente está conectado a la consola.
+Se utiliza para mostrar la salida o los resultados al usuario.
+
+3 Error estándar (STDERR_FILENO):
+
+Valor del descriptor de archivo: 2
+Representa el flujo de error estándar, que también está conectado a la consola.
+Se utiliza para mostrar mensajes de error o diagnósticos.
+
+4. Descriptores de archivos adicionales:
+
+Los valores del descriptor de archivo comienzan desde 3 en adelante y representan cualquier otro 
+archivo que su programa abra usando la función open() o que reciba como resultado de otras operaciones.
+Por ejemplo, si abre un archivo usando la función open(), devolverá un descriptor de archivo que puede 
+usar para realizar operaciones en ese archivo.
+
+
+
+En C, el parámetro fd en la función de escritura generalmente significa "file descriptor".
+
+Un descriptor de archivo es un número entero positivo que identifica de forma única un archivo abierto
+en un proceso. Esta usado para realizar varias operaciones en archivos, como leer o escribir en ellos. 
+La función write() se utiliza para escribir datos en un archivo o en un objeto similar a un archivo.
+
+
+
+Sintasis de write():
+
+#include <unistd.h>
+
+ssize_t write(int fd, const void *buf, size_t count);
+
+El parámetro fd representa el "file descriptor" del archivo donde se escribirán los datos. El parámetro
+buf es un puntero a los datos que deben escribirse, y el parámetro de recuento especifica el número de bytes
+que se escribirán.
+
+Es importante tener en cuenta que los descriptores de archivos también pueden hacer referencia a otros tipos 
+de recursos, no solo a archivos normales. Por ejemplo, pueden representar dispositivos, enchufes o tuberías.
+El significado específico del parámetro fd puede variar según el contexto en el que se utilice la función de
+escritura.
+
+
+
+La elección entre int y size_t depende del caso de uso específico:
+
+Utilice int cuando necesite representar enteros con signo o cuando el rango de valores se encuentre dentro
+de los límites de un int. Por ejemplo, contar de -100 a 100 o representar el resultado de un cálculo matemático.
+
+Use size_t cuando necesite representar tamaños o índices de objetos en la memoria, especialmente cuando se trata
+de matrices, búferes o asignación de memoria. Por ejemplo, iterar sobre los elementos de una matriz, determinar
+el tamaño de un objeto o indexar en un contenedor.
