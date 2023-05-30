@@ -6,17 +6,17 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:37:32 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/26 10:33:35 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:29:34 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*Reserva memoria con malloc y devuelve una nueva string, formada por la 
 concatenación de “s1” y “s2”. Devuelve la nueva string o nulo (0) si falla la 
 reserva de memoria.
     s1: La primera string.
     s2: La string a añadir a “s1”.*/
+
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

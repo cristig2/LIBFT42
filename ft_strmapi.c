@@ -6,11 +6,9 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:38:45 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/26 10:35:07 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:29:57 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*A cada carácter de la string “s”, aplica la función “f” dando como parámetros 
 el índice de cada carácter dentro de “s” y el propio carácter. Genera una nueva 
@@ -19,6 +17,8 @@ el correcto uso de “f” sobre cada carácter o nulo (0) si falla la reserva d
 memoria.
 	s: La string que iterar.
 	f: La función a aplicar sobre cada carácter.*/
+
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

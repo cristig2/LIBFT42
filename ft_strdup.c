@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:37:05 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/17 19:37:05 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:29:22 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*Devuelve un puntero a una nueva string que es un duplicado de la string 
 apuntada por “s”. La memoria para la nueva string se obtiene automáticamente 
 con malloc, y puede (y debe) liberarse con free.*/
+
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

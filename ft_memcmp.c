@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:36:08 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/17 19:36:08 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:21:13 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*Compara los primeros “n” bytes (cada uno interpretado como unsigned char) del
 objeto apuntado por “s1” con los primeros “n” bytes del objeto apuntado por “s2”
 Devuelve la resta de los primeros caracteres distintos encontrados entre ambos
 strings. Si son todos iguales devuelve 0.*/
+
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

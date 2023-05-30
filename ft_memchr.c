@@ -6,21 +6,21 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:35:54 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/26 09:58:29 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:21:30 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*Busca la primera aparición de c (convertida en unsigned char) en los “n” bytes
  iniciales (cada uno interpretado como unsigned char) apuntados por “s”. 
 Si se encuentra “c”, devuelve un puntero al byte correspondiente en s. De lo 
 contrario devuelve nulo.
-•“str”: Es el puntero al bloque de memoria donde se realiza la búsqueda.
-•“c”: Es el valor que se pasará como un int, pero la función realiza una 
+“str”: Es el puntero al bloque de memoria donde se realiza la búsqueda.
+“c”: Es el valor que se pasará como un int, pero la función realiza una 
 búsqueda byte por byte utilizando la conversión de caracteres sin signo de este
 valor.
-•“n”: Este es el número de bytes a analizar.*/
+“n”: Este es el número de bytes a analizar.*/
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -6,11 +6,9 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:37:18 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/26 10:36:24 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:28:09 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*A cada carácter de la string “s”, aplica la función “f” dando como parámetros
  el índice de cada carácter dentro de “s” y la dirección del propio carácter, 
@@ -19,6 +17,8 @@
     f: La función a aplicar sobre cada carácter.
 Si el string s y la funcion f son diferente a nuli, entra en el while y ejecuta
 la funcion*/
+
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

@@ -6,25 +6,29 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 11:48:20 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/26 13:00:38 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:26:53 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*Envía el número "n" al file descriptor especificado. No devuelve nada.*/
 
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long long	num;
-	char		c;
+	long int	nc;
 
-	num = n;
-	if (num < 0)
+	nc = n;
+	if (nc < 0)
 	{
-		write(fd, "-", 1);
-		num = num * -1;
+		ft_putchar_fd('-', fd);
+		nc = nc * -1;
 	}
-	if (num >= 10)
-		ft_putnbr_fd(num / 10, fd);
-	c = '0' + (num % 10);
-	write(fd, &c, 1);
+	if (nc > 9)
+	{
+		ft_putnbr_fd(nc / 10, fd);
+		ft_putchar_fd((nc % 10) + '0', fd);
+	}
+	else
+		ft_putchar_fd(nc + '0', fd);
 }

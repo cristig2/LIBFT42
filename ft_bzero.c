@@ -6,15 +6,16 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:32:10 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/26 10:04:08 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:21:41 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*Convierte a ‘\0’ los (len) primeros bytes del string "str". No devuelve nada.
+Otra forma de hacer esta función es llamando a la función memset que copia el 
+valor de “c” (convertido a un unsigned char) a cada uno de los primeros “len” 
+bytes del objeto al cual señala “str”. ft_memset(str, 0, len); */
 
-/*Convierte a ‘\0’ los “len” primeros bytes del string "str". No devuelve nada.
-Otra forma de hacer esta función es llamando a la función memset y dándole los
-parámetros que necesitamos para esta función: ft_memset(str, 0, len); */
+#include "libft.h"
 
 void	ft_bzero(void *str, size_t len)
 {

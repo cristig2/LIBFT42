@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:35:38 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/17 19:35:42 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:21:00 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Indica si el caracter es ascii imprimible.
 Devuelve un valor distinto a 0, si el valor es ascii imprimible*/
+
 int	ft_isprint(int arg)
 {
 	if (arg >= 32 && arg <= 126)

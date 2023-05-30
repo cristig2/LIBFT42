@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:36:39 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/17 19:36:44 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:22:23 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*La función memset() copia el valor de “c” (convertido a un unsigned char) a
 cada uno de los primeros “len” bytes del objeto al cual señala “str”.
 Con lo cual, llena los primeros bytes de longitud del área de memoria apuntada 
 por “str” con el byte de c. Devuelve el valor de “str”.*/
+
+#include "libft.h"
 
 void	*ft_memset(void *str, int c, size_t len)
 {

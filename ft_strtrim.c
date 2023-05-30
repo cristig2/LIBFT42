@@ -6,11 +6,9 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:39:34 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/26 11:01:30 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:30:38 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*Elimina todos los caracteres de la string “set” desde el principio y desde el 
 final de “s1”, hasta encontrar un carácter no perteneciente a “set”. La string 
@@ -26,6 +24,8 @@ ft_substr: Toma una string "s1" y crea una substring que empieza desde "0" y
 tiene una longitud de ("len" + '\0'). La función reserva memoria para la 
 substring utilizando "malloc" y devuelve un puntero de la substring resultante 
 o nulo(0). */
+
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

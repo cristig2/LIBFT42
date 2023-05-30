@@ -6,9 +6,12 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 11:14:10 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/26 11:43:17 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:25:15 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*Envía la string "s" al file descriptor especificado. Seguido de un salto de 
+linea. No devuelve nada.*/
 
 #include "libft.h"
 

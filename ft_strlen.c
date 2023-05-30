@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:38:28 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/17 19:38:28 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:29:49 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 /*Indica el numero de caracters de una string.
 Devuelve el numero de caracteres que forma esa string*/
+
+#include "libft.h"
 
 int	ft_strlen(const char *str)
 {

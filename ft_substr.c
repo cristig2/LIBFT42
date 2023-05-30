@@ -6,11 +6,9 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:39:47 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/26 11:39:33 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/30 13:30:49 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*Toma una string "s" y crea una substring. “substr” empieza desde el índice 
 "start" y tiene una longitud máxima ("len"). La función reserva memoria para 
@@ -19,6 +17,8 @@ nulo(0) si falla la reserva de memoria..
 	s: La string desde la que crear la substring.
 	start: El índice del caracter en "s" desde el que empezar la substring.
 	len: La longitud máxima de la substring.*/
+
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
