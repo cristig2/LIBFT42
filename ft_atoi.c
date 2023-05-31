@@ -6,7 +6,7 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:35:07 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/30 13:21:52 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/31 11:48:22 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-/*
+
 int	main(void)
 {
 	printf("Cadena a entero: %d\n", ft_atoi("8n6es"));
 	return (0);
-}*/
+}

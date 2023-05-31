@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 12:23:21 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/21 12:23:21 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/05/31 14:32:54 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,57 +34,74 @@ diferente al caracter delimitador(d) entra en el if donde obtendra el tamaño de
 la palabra al llegar al delimitador.
 
 Devuelve un array con las nuevas strings resultantes de la separación de str y 
-si falla la reserva de memoria devolvera nulo(0).*/
+si falla la reserva de memoria devolvera nulo(0).
 
-static size_t   ft_wordcounter(char const *str, char d)
+flag lo uso para que no cuente el dilimitador como palabra*/
+
+static int	ft_wordcounter(char const *str, char d)
 {
-    size_t         i;
-    size_t         j;
+	int	i;
+	int	j;
+	int	flag;
 
-    i = 0;
-    j = 0:
-    while (str[i] != '\0')
-    {
-        if (str[i] != d)
-            i++;
-        else if (str[i] == d || str[i] == '\0')
-            j++;
-    }
-    return (j);
+	i = 0;
+	j = 0;
+	flag = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] != d)
+		{
+			flag = 1;
+		}
+		if ((flag == 1 && str[i] == d) || (flag == 1 && str[i + 1] == '\0'))
+		{
+			j++;
+			flag = 0;
+		}			
+		i++;
+	}
+	return (j);
 }
 
-char **ft_split(char const *str, char d)
+char	**ft_split(char const *str, char d)
 {
-    char        **substr;
-    size_t      len;
-    size_t      num;
+	size_t	len;
+	size_t	num;
+	char	**strstr;
 
-    substr = malloc(sizeof(char*) * (ft_wordcounter(str, d) + 1));
-    if (substr != '\0') 
-        return (0);
-    num = 0;
-    while (*str) 
-    {
-        if (*str != d) 
-        {
-            len = 0;
-            while (*str && *str != d)//probar si con solo este while funciona
-            {
-                ++len;//suma dentro del while
-                ++str;
-            }
-            substr[num++] = ft_substr(str - len, 0 len);
-        }
-        else
-            str++;//suma cuando sale del while
-    }
-    substr[num] = 0;//porque existe num si con str(posicion del string) podria funcionar
-    return (substr)
+	strstr = (char **)malloc(sizeof(char *) * (ft_wordcounter((char *)str, d) + 1));
+	if (!strstr)
+		return (0);
+	num = 0;
+	while (*str)
+	{
+		if (*str != d)
+		{
+			len = 0;
+			while (*str && *str != d)
+			{
+				++len;
+				++str;
+			}
+			strstr[num] = ft_substr(str - len, 0, len);
+			num++;
+		}
+		else
+			str++;
+	}
+	strstr[num] = 0;
+	return (strstr);
 }
 /*
 int	main(void)
 {
-	printf("Strings: %s\n", ft_split("Hola buenos dias, que tal estas?", " "));
+	char const	*str;
+	char		d;
+
+	str = "Hola que tal";
+	d = ' ';
+	ft_split(str, d);
+	printf("Strings: %i\n", ft_wordcounter(str, d));
+	printf("Strings: %s\n", str);
 	return (0);
 }*/
-
