@@ -6,7 +6,7 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 10:20:55 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/31 14:22:31 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/06/01 13:27:14 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	**ft_split(char const *str, char d);
+char	*ft_itoa(int n);
 
 #endif

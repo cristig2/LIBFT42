@@ -6,7 +6,7 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:36:08 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/30 13:21:13 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/06/01 13:21:38 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 /*
 int	main(void)
 {
-	printf("StrCmp: %d\n", ft_memcmp("Hola caracola", "Hola buenos días!", 12));
+	printf("Comparación string: %d\n", ft_memcmp("Hola buenas!", "Hola", 20));
 	return (0);
-}*/
+}
+*/

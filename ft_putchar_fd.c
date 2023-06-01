@@ -6,11 +6,12 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 20:01:59 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/30 13:25:26 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/06/01 13:05:45 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Envía el carácter "c" al file descriptor especificado. No devuelve nada.*/
+/*Escribe un carácter "c" al file descriptor especificado "fd". 
+No devuelve nada.*/
 
 #include "libft.h"
 

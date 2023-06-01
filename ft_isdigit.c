@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crgallar <crgallar@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:35:24 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/17 19:35:27 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/06/01 11:50:42 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Indica si el caracter es numerico.
-Devuelve un valor distinto a 0 si el valor esta entre 0-9.*/
+/*Indica si el caracter es numerico. La función toma como parámetro un carácter
+y devuelve un entero. Si el carácter es un dígito decimal, devuelve un valor 
+diferente de cero, de lo contrario, devuelve cero.*/
+
+#include "libft.h"
 
 int	ft_isdigit(int arg)
 {
@@ -22,6 +25,7 @@ int	ft_isdigit(int arg)
 /*
 int	main(void)
 {
-	printf("Valor del caracter: %d\n", ft_isalpha(4));
+	printf("Valor del caracter: %d\n", ft_isdigit('0'));
 	return (0);
-}*/
+}
+*/

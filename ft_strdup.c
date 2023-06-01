@@ -6,7 +6,7 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:37:05 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/30 13:29:22 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/06/01 12:51:55 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,13 @@ char	*ft_strdup(const char *s)
 }
 /*
 int	main(void)
-{	
-	printf("str: %s\n", ft_strdup("Hello World"));
+{
+	char *s1 = "Hola mundo!";
+	char *s2 = strdup(s1);
+
+	printf("s1: %s\n", s1);
+	printf("s2: %s\n", s2);
+	free(s2);
 	return (0);
-}*/
+}
+*/
