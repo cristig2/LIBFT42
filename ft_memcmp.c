@@ -6,14 +6,16 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:36:08 by crgallar          #+#    #+#             */
-/*   Updated: 2023/06/01 13:21:38 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/06/02 10:34:49 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*Compara los primeros “n” bytes (cada uno interpretado como unsigned char) del
 objeto apuntado por “s1” con los primeros “n” bytes del objeto apuntado por “s2”
 Devuelve la resta de los primeros caracteres distintos encontrados entre ambos
-strings. Si son todos iguales devuelve 0.*/
+strings. Si son todos iguales devuelve 0.
+Uso unsigned char para asegurarme de que los bytes se traten correctamente
+sin firmar.*/
 
 #include "libft.h"
 

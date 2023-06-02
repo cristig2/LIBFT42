@@ -6,7 +6,7 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 22:47:06 by crgallar          #+#    #+#             */
-/*   Updated: 2023/06/01 12:23:58 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/06/02 12:34:26 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,12 @@ static int	ft_digit_count(int i)
 	int	count;
 
 	count = 0;
-	if (i == 0)
-	{
-		count++;
-		return (count);
-	}
-	if (i < 0)
+	if (i <= 0)
 	{
 		i = i * -1;
 		count++;
 	}
-	while (i > 0)
+	while (i != 0)
 	{
 		i = i / 10;
 		count++;
@@ -60,7 +55,7 @@ static int	ft_digit_count(int i)
 char	*ft_itoa(int n)
 {
 	char		*str;
-	int			len;
+	size_t		len;
 	long int	nb;
 
 	nb = n;
@@ -68,7 +63,7 @@ char	*ft_itoa(int n)
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (0);
-	str[len--] = 0;
+		str[len--] = '\0';
 	if (n == 0)
 		str[0] = '0';
 	if (nb < 0)
@@ -84,13 +79,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-/*
-int	main(void)
-{
-	int num = 123;
-	char *str = ft_itoa(num);
-	printf("Número: %d \n", num);
-	printf("String: %s \n", str);
-	return (0);
-}
-*/

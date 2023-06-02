@@ -6,7 +6,7 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 12:23:21 by crgallar          #+#    #+#             */
-/*   Updated: 2023/05/31 14:32:54 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/06/02 11:11:44 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ si falla la reserva de memoria devolvera nulo(0).
 
 flag lo uso para que no cuente el dilimitador como palabra*/
 
-static int	ft_wordcounter(char const *str, char d)
+static int	ft_w_c(char const *str, char d)
 {
 	int	i;
 	int	j;
@@ -63,15 +63,22 @@ static int	ft_wordcounter(char const *str, char d)
 	return (j);
 }
 
-char	**ft_split(char const *str, char d)
+char	**ft_free(char **strstr, size_t num)
+{
+	num = 0;
+	while (strstr[num] != NULL)
+	{
+		free(strstr[num]);
+		num++;
+	}
+	free(strstr);
+	return (0);
+}
+
+char	**ft_split_split(char **strstr, size_t num, char d, char const *str)
 {
 	size_t	len;
-	size_t	num;
-	char	**strstr;
 
-	strstr = (char **)malloc(sizeof(char *) * (ft_wordcounter((char *)str, d) + 1));
-	if (!strstr)
-		return (0);
 	num = 0;
 	while (*str)
 	{
@@ -80,16 +87,31 @@ char	**ft_split(char const *str, char d)
 			len = 0;
 			while (*str && *str != d)
 			{
-				++len;
 				++str;
+				++len;
 			}
 			strstr[num] = ft_substr(str - len, 0, len);
+			if (!strstr[num])
+				return (ft_free(strstr, num));
 			num++;
 		}
 		else
 			str++;
 	}
 	strstr[num] = 0;
+	return (strstr);
+}
+
+char	**ft_split(char const *str, char d)
+{
+	size_t	num;
+	char	**strstr;
+
+	strstr = (char **)malloc(sizeof(char *) * (ft_w_c((char *)str, d) + 1));
+	if (!strstr)
+		return (0);
+	num = 0;
+	strstr = ft_split_split(strstr, num, d, (char *)str);
 	return (strstr);
 }
 /*

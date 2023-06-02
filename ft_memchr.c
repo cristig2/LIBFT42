@@ -6,7 +6,7 @@
 /*   By: crgallar <crgallar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:35:54 by crgallar          #+#    #+#             */
-/*   Updated: 2023/06/01 12:31:36 by crgallar         ###   ########.fr       */
+/*   Updated: 2023/06/02 09:50:05 by crgallar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,11 @@ str - Es el puntero al bloque de memoria donde se realiza la búsqueda.
 c - Es el valor que se pasará como un int, pero la función realiza una búsqueda 
 	byte por byte utilizando la conversión de caracteres sin signo de este valor.
 n - Este es el número de bytes a analizar.
-*/
+
+Al devolver un puntero genérico (void *), la función ft_memchr no impone una 
+interpretación específica sobre el tipo de dato que apunta el puntero devuelto.
+Esto permite que el usuario posteriormente convierta el puntero a cualquier tipo 
+de dato que sea apropiado en su contexto.*/
 
 #include "libft.h"
 
